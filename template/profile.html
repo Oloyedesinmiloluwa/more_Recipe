@@ -18,11 +18,11 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark pink">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="home.html">More Recipes</a>
+    <a class="navbar-brand" href="index.html">More Recipes</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -34,10 +34,14 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home.html">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="recipes.html">Recipes<span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recipes<span class="sr-only">(current)</span><div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="recipes.html">African Dishes</a>
+                    <a class="dropdown-item" href="recipes.html">Chinese Dishes</a>
+                    <a class="dropdown-item" href="recipes.html">Japanese Dishes</a>
+                </div></a>
             </li>
             
             <li class="nav-item">
@@ -45,12 +49,12 @@
             </li>
 
             <!-- Dropdown -->
-            <li class="nav-item dropdown">
+            <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="profile.html">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
-                    <a class="dropdown-item" href="#">log out</a>
+                    <a class="dropdown-item" href="index.html">log out</a>
                 </div>
             </li>
 
@@ -65,13 +69,14 @@
     <!-- Collapsible content -->
 
 </nav>
-<!--/.Navbar--> 
+<!--/.Navbar-->  
 <div class="container">
     <br>
     
 
 <p>[Username] profile</p>
-    <img src="image/showrecipe.jpg" class="rounded-circle" alt="image for user">
+    <img src="image/sr0.jpg" class="rounded" alt="image for user">
+    <div align="center">
 <p>This are your profile information</p>
 
 <form class="col-md-5">
@@ -105,7 +110,7 @@
     </div>
 
 </form>
-
+<div>
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>

@@ -1,1 +1,6 @@
 /* YOUR CUSTOM STYLES */
+/*h3,h4,h5 */
+.card-title,h1,h2,h3,h4,h5,button{
+color :red
+
+}
