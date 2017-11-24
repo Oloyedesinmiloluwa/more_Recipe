@@ -1,11 +1,8 @@
-'use strict';
- 
-let uuid = require('node-uuid');
- 
+var uuid = require('node-uuid');
 class RecipeService {
     constructor() {
-        this.recipes = ["jhekjle"];
-        this.recipes.id=0;
+        this.recipes = [];
+        this.recipes.id = 0;
     }
  
     getRecipes() {
@@ -13,8 +10,8 @@ class RecipeService {
     }
  
     getSingleRecipe(recipeId) {
-      //  let recipe = this.recipes.filter(p => p.id === recipeId)[0];
- let recipe= this.recipes[recipeId];
+      //  var recipe = this.recipes.filter(p => p.id === recipeId)[0];
+ var recipe= this.recipes[recipeId];
         return recipe || null;
     }
  
@@ -24,9 +21,8 @@ class RecipeService {
           //  return false;
      //   }
  
-        // info.id = uuid.v4();
-        info.id =5// this.recipes.id ++;
-        console.log(info);
+        // info.id = uuid.v4();  
+        info.id = this.recipes.id++;
         this.recipes.push(info);
         return true;
     }
@@ -44,7 +40,7 @@ class RecipeService {
     }
  
     updateRecipe(recipeId, info) {
-        let recipe = this.getSingleRecipe(recipeId);
+        var recipe = this.getSingleRecipe(recipeId);
         if (recipe) {
             recipe.recipeTitle = info.recipeTitle ? info.recipeTitle : recipe.recipeTitle;
             recipe.recipeBody = info.recipeBody ? info.recipeBody : recipe.recipeBody;
@@ -55,7 +51,7 @@ class RecipeService {
         return false;
     }
     deleteRecipe(recipeId,info){
-        let recipe = this.recipes.filter(r => r.id === id)[0];
+        var recipe = this.recipes.filter(r => r.id === id)[0];
     }
 }
  

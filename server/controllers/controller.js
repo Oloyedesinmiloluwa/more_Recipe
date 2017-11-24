@@ -1,6 +1,6 @@
 'use strict';
  
-let RecipeService = require('../routes/recipes');
+var RecipeService = require('../routes/recipes');
  
 class RecipeController {
     constructor(router) {
@@ -18,14 +18,14 @@ class RecipeController {
       //  this.router['delete']('/recipes/id', this.deleteRecipe.bind(this));
     }
  
-    getRecipes(req, res) {
-        let recipes = RecipeService.getRecipes();
+  getRecipes(req, res) {
+        var recipes = RecipeService.getRecipes();
         res.send(recipes);
     }
  
     getSingleRecipe(req, res) {
-        let id = req.params.id;// //let id = parseInt(req.params.id, 10);
-        let recipe = RecipeService.getSingleRecipe(id);
+        var id = req.params.id;// //var id = parseInt(req.params.id, 10);
+        var recipe = RecipeService.getSingleRecipe(id);
  
         if (!recipe) {
             res.sendStatus(404);
@@ -35,12 +35,12 @@ class RecipeController {
     }
  
     putRecipe(req, res) {
-        //let id = parseInt(req.params.id, 10);
-        let id = req.params.id;
-        let existingRecipe = RecipeService.getSingleRecipe(id);
+        //var id = parseInt(req.params.id, 10);
+        var id = req.params.id;
+        var existingRecipe = RecipeService.getSingleRecipe(id);
  
         if (!existingRecipe) {
-            let recipeInfo = req.body;
+            var recipeInfo = req.body;
             recipeInfo.id = id;
             if (RecipeService.addRecipe(recipeInfo)) {
                 res.setHeader('Location', '/recipes/' + id);
@@ -58,7 +58,7 @@ class RecipeController {
     }
  
     postRecipe(req, res) {
-        let recipeInfo = req.body;
+        var recipeInfo = req.body;
         console.log(recipeInfo);
         if (RecipeService.addRecipe(recipeInfo)) {
             res.setHeader('Location', '/recipes/' + recipeInfo.id);
@@ -68,14 +68,10 @@ class RecipeController {
         }
     }
     deleteRecipe(req, res) {
-        let id = parseInt(req.params.id, 10);
-        
+        var id = parseInt(req.params.id, 10);        
     }
-
-  
-
     postReview(req, res) {
-        let recipeInfo = req.body;
+        var recipeInfo = req.body;
  
         if (RecipeService.addReview(recipeInfo)) {
             res.setHeader('Location', '/recipes/' + recipeInfo.id);
