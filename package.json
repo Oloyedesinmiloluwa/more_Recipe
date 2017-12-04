@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon ./resources/www",
+    "start:dev": "nodemon ./server/resources/www",
     "test3": "echo \"Error: no test specified\" && exit 1",
-    "test": "mocha ./resources/tests/APItest.js --compilers js:babel-register --exit",
-    "test5": "mocha ./resources/tests/APItest.js --compilers js:babel-core/register --exit",
-    "start": "nodemon ./resources/www --exec babel-node",
-    "build": "babel resources -d babel_files",
-    "serve": "node babel_files/www.js"
+    "test": "mocha ./server/resources/tests/APItest.js --compilers js:babel-register --exit",
+    "test5": "mocha ./server/resources/tests/APItest.js --compilers js:babel-core/register --exit",
+    "start": "nodemon ./server/resources/www --exec babel-node",
+    "build": "babel server/resources -d babel_files",
+    "serve": "node server/babel_files/www.js"
   },
   "keywords": [],
   "author": "",

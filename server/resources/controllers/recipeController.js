@@ -17,7 +17,7 @@ class RecipeController {
   }
   static addRecipe(req, res) {
     if (req.body.recipeTitle === undefined || req.body.recipeBody === undefined) {
-      return res.send({ message: 'You must include a recipeTitle and recipeBody' });
+      return res.status(200).send({ message: 'You must include a recipeTitle and recipeBody' });
     }
     req.body.id = recipes[recipes.length - 1].id + 1;
     req.body.review = [];
