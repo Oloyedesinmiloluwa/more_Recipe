@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./server/resources/www",
+    "test3": "echo \"Error: no test specified\" && exit 1",
     "test": "mocha ./server/resources/tests/APItest.js --compilers js:babel-register --exit",
+    "test5": "mocha ./server/resources/tests/APItest.js --compilers js:babel-core/register --exit",
     "start": "nodemon ./server/resources/www --exec babel-node",
     "build": "babel server/resources -d babel_files",
-    "serve": "node server/babel_files/www.js",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "serve": "node server/babel_files/www.js"
   },
   "keywords": [],
   "author": "",
@@ -30,11 +31,11 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "coveralls": "^3.0.0",
+  
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha-lcov-reporter": "^1.3.0",
+    
     "nodemon": "^1.12.1"
   }
 }
