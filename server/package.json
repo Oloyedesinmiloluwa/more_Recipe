@@ -1,0 +1,41 @@
+{
+  "name": "p-e-r-n-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon ./resources/www",
+    "test3": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./resources/tests/APItest.js --compilers js:babel-register --exit",
+    "test5": "mocha ./resources/tests/APItest.js --compilers js:babel-core/register --exit",
+    "start": "nodemon ./resources/www --exec babel-node",
+    "build": "babel resources -d babel_files",
+    "serve": "node babel_files/www.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "morgan": "^1.9.0",
+    "node-uuid": "^1.4.8",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.17.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+  
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    
+    "nodemon": "^1.12.1"
+  }
+}
