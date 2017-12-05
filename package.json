@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./server/resources/www",
-    "test": "mocha ./server/resources/tests/APItest.js --compilers js:babel-register --exit",
+    "test": "nyc mocha ./server/resources/tests/APItest.js --compilers js:babel-register --exit",
     "start": "nodemon ./server/resources/www --exec babel-node",
     "build": "babel server/resources -d babel_files",
     "serve": "node server/babel_files/www.js",
