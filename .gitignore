@@ -1,3 +1,4 @@
+.nyc_output
 babel_files
 node_modules
 server/app.js
