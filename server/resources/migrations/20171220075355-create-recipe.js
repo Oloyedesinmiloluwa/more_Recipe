@@ -17,20 +17,22 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.INTEGER)
       },
       upvotes: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER)
-      },
-      downvotes: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER)
-      },
-      categoryid: {
         type: Sequelize.INTEGER
       },
-      userid: {
+      downvotes: {
+        type: Sequelize.INTEGER
+      },
+      categoryId: {
+        type: Sequelize.INTEGER
+      },
+      userId: {
         type: Sequelize.INTEGER
       },
       description: {
         type: Sequelize.TEXT
       },
+      ingredient: Sequelize.ARRAY(Sequelize.STRING),
+      review: Sequelize.ARRAY(Sequelize.STRING),
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

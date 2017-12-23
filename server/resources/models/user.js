@@ -1,4 +1,3 @@
-// import bcrypt from 'bcrypt';
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     firstName: DataTypes.STRING,
@@ -26,7 +25,11 @@ module.exports = (sequelize, DataTypes) => {
       // },
       // min: 5
     },
-    favorite: DataTypes.ARRAY(DataTypes.INTEGER),
+    categoryId: {
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
+    },
+    favourite: DataTypes.ARRAY(DataTypes.INTEGER),
+    notify: DataTypes.BOOLEAN,
     profilePicture: DataTypes.STRING,
   });
 

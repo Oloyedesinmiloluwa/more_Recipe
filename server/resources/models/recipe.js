@@ -12,19 +12,21 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.INTEGER),
     },
     upvotes: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-    },
-    downvotes: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-    },
-    categoryid: {
       type: DataTypes.INTEGER,
     },
-    userid: {
+    downvotes: {
+      type: DataTypes.INTEGER,
+    },
+    categoryId: {
+      type: DataTypes.INTEGER,
+    },
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     description: DataTypes.TEXT,
+    ingredient: DataTypes.ARRAY(DataTypes.STRING),
+    review: DataTypes.ARRAY(DataTypes.STRING),
   });
 
   Recipe.associate = (models) => {
