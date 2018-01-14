@@ -1,16 +1,17 @@
 {
-  "name": "p-e-r-n-tutorial",
+  "name": "more recipe",
   "version": "1.0.0",
-  "engines": { "node": "8.9.1"
+  "engines": {
+    "node": "8.9.1"
   },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon ./server/resources/www",
     "test": "sequelize db:migrate:undo:all&& sequelize db:migrate&& nyc mocha ./server/resources/tests/APItest.js --compilers js:babel-register --exit",
-    "start": "nodemon ./server/resources/www --exec babel-node",
-    "build": "babel server/resources -d babel_files",
-    "serve": "node server/babel_files/www.js",
+    "start:dev": "nodemon ./server/resources/www --exec babel-node",
+    "build": "babel server/resources -d server/babel_files",
+    "heroku-postbuild": "npm run build",
+    "start": "node server/babel_files/www.js",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
@@ -31,18 +32,19 @@
     "nodemailer": "^4.4.1",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.17.2"
-  },
-  "devDependencies": {
+    "sequelize": "^4.17.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
+    "babel-register": "^6.26.0"
+  },
+  "devDependencies": {
+    
     "coveralls": "^3.0.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "mocha-lcov-reporter": "^1.3.0",
-    "nodemon": "^1.12.1",
+    "nodemon": "^1.14.11",
     "nyc": "^11.3.0"
   }
 }
