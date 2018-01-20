@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   "development": {
     "username": "sinmiloluwa",
     "password": "JESUS",
@@ -16,11 +16,6 @@ export default {
     "dialect": "postgres"
   },
   "production": {
-    "username": "sinmiloluwa",
-    "password": "JESUS",
-    "database": "recipes_production",
-    "host": "127.0.0.1",
-    "port": 5432,
-    "dialect": "postgres"
+    "use_env_variable": "DATABASE_URL"
   }
 }

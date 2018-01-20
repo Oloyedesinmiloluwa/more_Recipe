@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "sequelize db:migrate:undo:all&& sequelize db:migrate&& nyc mocha ./server/resources/tests/APItest.js --compilers js:babel-register --exit",
-    "start:dev": "nodemon ./server/resources/www --exec babel-node",
+    "start:dev": "set NODE_ENV=production&& sequelize db:migrate&& nodemon ./server/resources/www --exec babel-node",
     "build": "babel server/resources -d server/babel_files",
     "heroku-postbuild": "npm run build",
     "start": "node server/babel_files/www.js",
