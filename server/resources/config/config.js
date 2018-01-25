@@ -5,7 +5,7 @@ module.exports = {
     "database": "recipes_dev",
     "host": "127.0.0.1",
     "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
   },
   "test": {
     "username": "sinmiloluwa",

@@ -1,7 +1,6 @@
 .vscode
 .nyc_output
 babel_files
-.env
 node_modules
 server/app.js
 server/app1.js

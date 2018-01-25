@@ -13,7 +13,6 @@ const env = process.env.NODE_ENV || 'development';
 const config = configjs[env];
 // config = require(`${__dirname}/../config/config.js`)[env];
 const db = {};
-console.log(config.use_env_variable);
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], { dialect: 'postgres', protocol: 'postgres', dialectOption: { SSL: true, native: true }, logging: true });
