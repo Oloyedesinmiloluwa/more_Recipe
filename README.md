@@ -2,4 +2,4 @@
 
 a web project for adding and viewing reicpes
 
-Visit http//:www.morerecipe.com/home to know more about our site
+Visit https://oloyedesinmiloluwa.github.io/more_Recipe/template/profile.html to know more about our site

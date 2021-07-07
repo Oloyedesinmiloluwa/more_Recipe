@@ -1,1 +1,6 @@
-/* YOUR CUSTOM STYLES */div.col-md-4.mycard {height: 33.333333%;}
+/* YOUR CUSTOM STYLES */
+/*h3,h4,h5 */
+.card-title,h1,h2,h3,h4,h5,button{
+color :red
+
+}
